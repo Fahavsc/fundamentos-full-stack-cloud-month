@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo javascript</title>
+</head>
+<body>
+    <script>
+        //export para utilizar a variavel ou constante em qualquer arquivo
+        let name = 'Fabricio'//Let é chamado em tempo de execução
+        {
+            let name = 'Alves'
+            console.log(name)  
+        }
+        console.log(name)
+        var name1 = 'Juca' //Var é chamado quando o script roda
+        const car = {
+            name : 'fordka',
+            color : 'red'
+        }
+        car.name = 'Ferrari'
+        console.log(car, 'hello')
+        Object.freeze(car);
+        car.name = 'Golzinho'
+        console.log(car)
+
+        const myFunction = function callName(){
+            var name = 'alves'
+            console.log(name, 'hello')
+        };
+        
+        //callName()
+        myFunction();
+        
+        export const sum =
+         (num1, num2) => { return num1 + num2 }
+
+    </script>
+</body>
+</html>
